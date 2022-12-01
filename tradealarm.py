@@ -8,8 +8,8 @@ import requests
 ##### bybit key #####
 session = HTTP(
     endpoint="https://api.bybit.com", 
-    api_key="iX7k37KXnQjwBzGZhd", 
-    api_secret="srUkMMdV6LowHORthjqdNM2pkH8fI5VCjEVF"
+    api_key="aip_key", 
+    api_secret="api_secret"
 )
 ##### RSI #####
 def rsi_bybit(itv, symbol='BTCUSDT'):
@@ -49,7 +49,7 @@ def sendLine(content):
     now = datetime.now()
     try:
         TARGET_URL = 'https://notify-api.line.me/api/notify'
-        TOKEN = 'yDUSKahXXt8Jr63GJ2eVMtekTB05EChUrPIZwk6b3CY' #'odbC9PrCtew1vMLA5qKQVJ71MbH882u9F1yTAFxjWR6'
+        TOKEN = 'your token'
         response = requests.post(
             TARGET_URL,
             headers={'Authorization': 'Bearer ' + TOKEN},
@@ -87,7 +87,7 @@ while True:
         for i in range(0,4):
             pre_price_1[4-i] = pre_price_1[3-i]
         pre_price_1[0] = price()
-    print(price(), pre_price_1, pre_price_5, pre_price_15, now.strftime('%Y.%m.%d - %H:%M:%S'))
+    #print(price(), pre_price_1, pre_price_5, pre_price_15, now.strftime('%Y.%m.%d - %H:%M:%S'))
     if size(1) == 0:
         if size(0) == 0:
             trade_state = 0 # no position

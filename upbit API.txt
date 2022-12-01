@@ -1,2 +1,0 @@
-access = "smgqt57qWHxW6LNpr2LXn5thigIVK1N0oFBeATT4"
-secret = "wFDuTWkitGfS1urO3Tl907x8Wf78vlhlCidyd5uo" 
